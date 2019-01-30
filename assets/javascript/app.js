@@ -58,7 +58,6 @@ function renderGif(data) {
     newDiv.append("<br>")
     newDiv.append(newGif)
     $("#gifs").append(newDiv);
-    console.log(newDiv)
 }
 
 function gifHandler(gif) {
@@ -70,4 +69,3 @@ function gifHandler(gif) {
     }
 }
 
-//data.images.original.url
