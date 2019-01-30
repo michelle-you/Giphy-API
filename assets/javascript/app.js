@@ -30,7 +30,7 @@ $("#gif-form").submit(function(event){
     console.log(topic)
     createButton(topic)
     event.preventDefault()
-})
+});
 
 function buttonHandler(button){
     var queryURL ="https://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q=" + encodeURIComponent(button.innerText) +"&limit=10";
@@ -44,7 +44,7 @@ function buttonHandler(button){
             renderGif(gifData)
         }
     });
-}
+};
 
 function renderGif(data) {
     gifUrls[data.id] = {
@@ -58,7 +58,7 @@ function renderGif(data) {
     newDiv.append("<br>")
     newDiv.append(newGif)
     $("#gifs").append(newDiv);
-}
+};
 
 function gifHandler(gif) {
     var gifData = gifUrls[gif.id]
@@ -67,5 +67,5 @@ function gifHandler(gif) {
     } else if (gif.src === gifData.gif) {
         gif.src = gifData.still
     }
-}
+};
 
