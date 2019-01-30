@@ -33,7 +33,7 @@ $("#gif-form").submit(function(event){
 })
 
 function buttonHandler(button){
-    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q="+ encodeURIComponent(button.innerText) +"&limit=10";
+    var queryURL = + encodeURIComponent(button.innerText) +"&limit=10";
     
     $.ajax({
         url: queryURL,
